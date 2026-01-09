@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@layer utilities {
+  .hero {
+    background-image: url("./assets/header_bg.png");
+    @apply min-h-screen
+    bg-cover bg-center bg-no-repeat;
+  }
+}
+
+@theme {
+  --primary-color: #410097;
+  --secondary-color: #B983FF;
+  --font-sans: "Instrument Sans", sans-serif;
+  --text-xl: 46px;
+  --text-2xl: 60px;
+  --text-md: 30px;
+  --text-sm: 18px;
+}
+
+@layer base{
+  html,
+  body {
+    font-family: var(--font-sans), sans-serif;
+    @apply bg-white;
+  }
+
+  h1{
+    font-size: var(--text-xl);
+    @apply leading-tight tracking-tight font-semibold;
+  }
+
+  h2{
+    font-size: var(--text-md);
+    @apply leading-tight tracking-tight font-semibold;
+  }
+
+  p{
+    font-size: var(--text-sm);
+    @apply leading-tight tracking-tight font-normal text-center;
+  }
+
+  .navbar{
+    font-size: var(--text-sm);
+    background-color: var(--primary-color);
+    font-family: var(--font-sans), sans-serif;
+    @apply shadow-lg flex flex-wrap justify-between items-center px-4 py-4 leading-tight mx-10 my-6 text-white font-medium rounded-xl w-13/14;
+  }
+
+  .primary-button{
+    @apply flex items-center justify-center bg-white text-black px-4 py-2 font-semibold rounded-lg;
+  }
+
+  .navbar-div{
+    @apply flex justify-between flex-row w-1/12;
+  }
+
+  .hero{
+    @apply flex flex-col items-center gap-20;
+  }
+
+  .container{
+    @apply flex flex-col items-center justify-center px-10 w-full text-center gap-8;
+  }
+
+
+  .ctas{
+    @apply flex flex-row items-center gap-10 m-10;
+  }
+
+  .button-1 {
+    @apply inline-block p-[1.5px]
+    rounded-[10px]
+    bg-gradient-to-r from-[#9747FF] to-[var(--primary-color)];
+  }
+
+  .btn-in-1{
+    /*background-color: var(--primary-color);*/
+    @apply bg-gradient-to-r from-[var(--secondary-color)] to-[var(--primary-color)]
+      text-white
+      px-4
+      py-2
+      font-semibold
+      rounded-[8.5px]
+      shadow-[inset_0_2px_6px_rgba(255,255,255,0.4)]
+    ;
+  }
+
+  .button-2{
+    @apply inline-block p-[1.5px]
+      rounded-[10px]
+      p-[1.5px]
+      bg-gradient-to-r from-[var(--primary-color)] to-[#150031];
+  }
+
+  .btn-in-2{
+    @apply flex items-center justify-center gap-2 bg-purple-200 rounded-[8.5px]
+    px-4
+    py-2
+    font-semibold
+    /*bg-gradient-to-r from-[var(--primary-color)] to-[#150031];*/
+  }
+
+  .about-bg{
+    @apply bg-gradient-to-b from-white to-[#DDC3FF]
+    p-20
+    ;
+  }
+
+  .row{
+    @apply flex flex-col items-center gap-10 m-6;
+  }
+
+}
