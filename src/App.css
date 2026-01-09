@@ -37,6 +37,11 @@
     @apply leading-tight tracking-tight font-semibold;
   }
 
+  h3{
+    font-size: var(--text-sm);
+    @apply leading-tight tracking-tight font-semibold;
+  }
+
   p{
     font-size: var(--text-sm);
     @apply leading-tight tracking-tight font-normal text-center;
@@ -54,7 +59,7 @@
   }
 
   .navbar-div{
-    @apply flex justify-between flex-row w-1/12;
+    @apply flex justify-between flex-row w-1/10;
   }
 
   .hero{
@@ -105,12 +110,69 @@
 
   .about-bg{
     @apply bg-gradient-to-b from-white to-[#DDC3FF]
-    p-20
+    py-20 px-60
     ;
   }
 
   .row{
     @apply flex flex-col items-center gap-10 m-6;
   }
+
+  .how-it-works{
+    @apply p-10 mt-20 mb-8;
+  }
+
+  .hiw-container{
+    @apply flex flex-row items-center justify-evenly gap-10 m-auto
+    ;
+  }
+
+  .hiw-h1{
+    font-size: var(--text-2xl);
+    @apply font-normal
+      bg-gradient-to-r
+      from-[var(--primary-color)]
+      via-[#150031]
+      to-[var(--primary-color)]
+      bg-clip-text text-transparent;
+  }
+
+  .ptrs-container{
+    @apply flex flex-col items-start m-6;
+  }
+
+  .ptr{
+    @apply flex flex-row items-center gap-4 m-4;
+  }
+
+  footer{
+    @apply bg-[var(--primary-color)] w-full h-full m-0 p-8;
+  }
+
+  .footer-container{
+    font-size: var(--text-sm);
+    @apply flex flex-col items-center text-white w-full gap-6;
+  }
+
+  .details-container{
+    @apply flex flex-row items-center justify-between w-1/2 px-20;
+  }
+
+  .links{
+    @apply flex items-center justify-between;
+  }
+
+  .links a{
+    @apply mx-1;
+  }
+
+  .socials{
+    @apply flex flex-row items-center justify-between mx-3;
+  }
+
+  .socials img{
+    @apply object-cover object-center mx-1;
+  }
+
 
 }
