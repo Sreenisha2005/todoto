@@ -1,21 +1,16 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Navbar from "./Navbar.jsx";
-import HeroSection from "./HeroSection.jsx";
+import Todo from "./Todo.jsx";
 import About from "./About.jsx";
-import Howitworks from "./Howitworks.jsx";
-import Footer from "./Footer.jsx";
+import LandingPage from "./LandingPage.jsx";
 
 function App() {
   return(
       <BrowserRouter>
-          <HeroSection />
-          <Howitworks />
-          <About />
-          <Footer />
           <Routes>
-              <Route path="/" element={<div />} />
-              <Route path="/about" element={<div />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/todos" element={<Todo />} />
+              <Route path="/about" element={<About />} />
           </Routes>
       </BrowserRouter>
   );
